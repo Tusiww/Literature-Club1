@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Storybook - Literature Club</title>
+    <link rel="preconnect" href="https://googleapis.com" />
+    <link rel="preconnect" href="https://gstatic.com" crossorigin />
+    <link
+      href="https://googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-left-group">
+            <div class="logo-wrapper">
+                <img src="images/monika.webp" alt="Just Monika" class="logo-avatar">
+                <div class="logo">Literature Club</div>
+            </div>
+            
+            <nav class="main-nav" aria-label="Primary site navigation">
+                <button class="nav-link active" data-page="home">Home</button>
+                <button class="nav-link" data-page="library">Library</button>
+                <button class="nav-link" data-page="about">About</button>
+            </nav>
+        </div>
+
+        <div class="header-controls">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle visual theme">Dark Mode</button>
+        </div>
+    </header>
+
+    <section id="homePage" class="page-view active">
+      <div class="hero-showcase-wrapper">
+        <div class="manga-marquee-container">
+          <div class="manga-marquee-track">
+            <img
+              src="images/jujutsu-panel.jpg"
+              alt="Manga Panel Background Art"
+              class="marquee-img"
+            />
+            <img
+              src="images/berserk-panel.jpg"
+              alt="Manga Panel Background Art"
+              class="marquee-img"
+            />
+            <img
+              src="images/chainsaw-panel.jpg"
+              alt="Manga Panel Background Art"
+              class="marquee-img"
+            />
+            <img
+              src="images/tokyoghoul-panel.jpg"
+              alt="Manga Panel Background Art"
+              class="marquee-img"
+            />
+            <img
+              src="images/berserk-panel1.jfif"
+              alt="Manga Panel Background Art"
+              class="marquee-img"
+            />
+            <img
+              src="images/chainsaw-panel 1.jpg"
+              alt="Manga Panel Background Art"
+              class="marquee-img"
+            />
+
+            <img
+              src="images/jujutsu-panel.jpg"
+              alt="Manga Panel Background Art"
+              class="marquee-img"
+            />
+            <img
+              src="images/berserk-panel.jpg"
+              alt="Manga Panel Background Art"
+              class="marquee-img"
+            />
+            <img
+              src="images/chainsaw-panel.jpg"
+              alt="Manga Panel Background Art"
+              class="marquee-img"
+            />
+            <img
+              src="images/tokyoghoul-panel.jpg"
+              alt="Manga Panel Background Art"
+              class="marquee-img"
+            />
+            <img
+              src="images/berserk-panel1.jfif"
+              alt="Manga Panel Background Art"
+              class="marquee-img"
+            />
+            <img
+              src="images/chainsaw-panel 1.jpg"
+              alt="Manga Panel Background Art"
+              class="marquee-img"
+            />
+          </div>
+
+          <div class="marquee-vignette-mask"></div>
+        </div>
+
+        <div class="hero-overlay-content">
+          <h1>Never Run Out of Stories.</h1>
+          <p>
+            Welcome to the Literature Club! We're building an open library
+            dedicated to making your favorite manga, classic stories, and global
+            serializations easily accessible to readers everywhere. Dive in and
+            explore the collection!
+          </p>
+        </div>
+      </div>
+
+      <div class="library-container">
+        <div class="grid-header">Featured Mangas</div>
+        <div class="manga-grid" id="featuredGrid">
+        </div>
+      </div>
+      <footer class="home-footer">
+        <div class="footer-divider"></div>
+        <p>&copy; 2026 Literature Club. ITE 1 Project.</p>
+        <p class="footer-credit">Created by Reigel M. Portales</p>
+      </footer>
+    </section>
+
+    <section id="libraryPage" class="page-view">
+       <div class="controls-section yt-style">
+            <div class="search-row">
+                <div class="search-container">
+                    <div class="search-icon-wrapper">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </div>
+                    <input type="text" id="searchInput" class="search-input integrated" placeholder="Search title or author...">
+                </div>
+            </div>
+            
+            <div class="genres-row-wrapper">
+                <button class="scroll-arrow-btn left" id="scrollLeftBtn" aria-label="Scroll navigation genres left">‹</button>
+                
+                <div class="genres-row" id="genresRow">
+                    <nav class="genre-tabs" id="genreTabs" aria-label="Filter library by genre">
+                    </nav>
+                </div>
+                
+                <button class="scroll-arrow-btn right" id="scrollRightBtn" aria-label="Scroll navigation genres right">›</button>
+            </div>
+        </div>
+
+        <div class="genres-row">
+          <nav
+            class="genre-tabs"
+            id="genreTabs"
+            aria-label="Filter library by genre"
+          >
+          </nav>
+        </div>
+      </div>
+
+      <main class="library-container">
+        <div class="grid-header" id="gridHeaderTitle">All Series</div>
+        <div class="manga-grid" id="mangaGrid">
+        </div>
+      </main>
+
+        <footer class="home-footer">
+            <div class="footer-divider"></div>
+            <p>&copy; 2026 Literature Club. ITE 1 Project.</p>
+            <p class="footer-credit">Created by Reigel M. Portales</p>
+        </footer>
+    </section>
+
+    <section id="aboutPage" class="page-view">
+      <div class="about-container">
+            <h2 class="about-title">About the Club.</h2>
+            <p class="about-lead">Welcome to the Literature Club. We're building an open library dedicated to making your favorite manga, classic stories, and global serializations easily accessible to readers everywhere.</p>
+            
+             <div class="about-stats-strip">
+                <div class="stat-block"><strong>30</strong><span>INDEXED TITLES</span></div>
+                <div class="stat-block"><strong>10</strong><span>GENRES</span></div>
+                <div class="stat-block"><strong>100%</strong><span>OPEN SOURCE</span></div>
+                <div class="stat-block"><strong>30</strong><span>CHAPTERS</span></div>
+            </div>
+            <div class="about-matrix-row">
+                <div class="matrix-cell">
+                    <span class="matrix-label">Project Scope</span>
+                    <span class="matrix-value">ITE 1 Final Project Submission</span>
+                </div>
+                <div class="matrix-cell">
+                    <span class="matrix-label">Developer</span>
+                    <span class="matrix-value">Reigel M. Portales</span>
+                </div>
+            </div>
+
+            <div class="about-matrix-row">
+                <div class="matrix-cell">
+                    <span class="matrix-label">Framework</span>
+                    <span class="matrix-value">Vanilla Architecture (HTML5, CSS, JavaScript)</span>
+                </div>
+                <div class="matrix-cell">
+                    <span class="matrix-label">Design Paradigm</span>
+                    <span class="matrix-value">High-Contrast Geometric Monotone Minimalist UI</span>
+                </div>
+            </div>
+
+            <div class="about-matrix-row">
+                <div class="matrix-cell">
+                    <span class="matrix-label">Core Database</span>
+                    <span class="matrix-value">30 Curated Serializations (Sorted Across 10 Genres)</span>
+                </div>
+                <div class="matrix-cell">
+                    <span class="matrix-label">Inspirations</span>
+                    <span class="matrix-value">Doki-Doki Literature Club / Steam Library UI Aesthetics</span>
+                </div>
+            </div>
+
+            <footer class="about-footer-note">
+                <div class="footer-divider"></div>
+                <p>&copy; 2026 Literature Club. ITE 1 Project. Created by Reigel M. Portales</p>
+            </footer>
+        </div>
+    </section>
+
+    <div class="modal" id="mangaModal" role="dialog" aria-modal="true">
+        <div class="modal-content text-reader-split">
+            <button class="close-modal" id="closeModal" aria-label="Close dialogue">&times;</button>
+            
+            <div class="reader-split-layout">
+                <aside class="reader-meta-column">
+                    <div class="reader-cover-box">
+                        <img src="" id="modalImg" alt="Manga Document Cover View" class="reader-cover-element">
+                    </div>
+                    <h2 class="modal-title" id="modalTitle">Manga Title</h2>
+                    <div class="modal-author" id="modalAuthor">By Author Name</div>
+                    
+                    <div class="reader-pill-row">
+                        <span class="genre-badge" id="modalGenre">N/A</span>
+                        <span class="vol-count" id="modalVolumes">N/A</span>
+                    </div>
+                    
+                    <div class="synopsis-container">
+                        <strong>Synopsis</strong>
+                        <p id="modalSynopsis">Book summary text will dynamically map inside this data container element slot on click execution loops...</p>
+                    </div>
+                </aside>
+                
+                <main class="reader-script-column">
+                    <h3 class="chapter-header-title" id="modalChapterTitle">Chapter 1: Initialization</h3>
+                    <div class="story-content-box" id="modalStoryContent">
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
